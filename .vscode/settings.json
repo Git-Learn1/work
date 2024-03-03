@@ -1,0 +1,8 @@
+{
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "standard",
+    "C_Cpp.default.includePath": [
+        "D:/Soft/Python/38/include"
+    ],
+    "C_Cpp.default.compilerPath": "cl.exe",
+}
