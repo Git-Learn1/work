@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.4)
+cmake_minimum_required(VERSION 3.5)
 project(work)
 
 set(PYTHON_EXECUTABLE "D:/Soft/Python/38/python.exe")
