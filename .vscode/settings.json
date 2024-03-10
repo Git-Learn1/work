@@ -11,6 +11,7 @@
         "eirmod",
         "elitr",
         "FORCECLOSEAPPLICATIONS",
+        "huggingface",
         "indeterminnate",
         "invidunt",
         "labore",
@@ -20,6 +21,8 @@
         "optionemenu",
         "padx",
         "pady",
+        "pickleshare",
+        "pysimplegui",
         "rowspan",
         "sadipscing",
         "sovits",
@@ -29,7 +32,9 @@
         "torchvision",
         "ultralytics",
         "vits",
-        "voluptua"
+        "voluptua",
+        "webui",
+        "xformers"
     ],
     "cSpell.enabledLanguageIds": [
         "asciidoc",

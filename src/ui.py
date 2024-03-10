@@ -65,7 +65,10 @@ class App(customtkinter.CTk):
         self.widgets.append(self.welcome_first_label)
         self.tips_first_label = customtkinter.CTkLabel(self, text="请在左侧栏中选择一个你需要部署的功能", font=customtkinter.CTkFont(size=16))
         self.tips_first_label.grid(row=4, column=3)
+        self.tips_second_label = customtkinter.CTkLabel(self, text="若是用整合包用户，请在各个功能的路径选择中选择当前目录下的 venv", font=customtkinter.CTkFont(size=16))
+        self.tips_second_label.grid(row=5, column=3)
         self.widgets.append(self.tips_first_label)
+        self.widgets.append(self.tips_second_label)
         
     def sidebar_button_2_event(self):
         self.sidebar_button_event()
