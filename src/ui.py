@@ -19,7 +19,7 @@ class App(customtkinter.CTk):
         self.sidebar_frame = customtkinter.CTkFrame(self, width=140, corner_radius=0)
         self.sidebar_frame.grid(row=0, column=0, rowspan=6, sticky="nsew")
         self.sidebar_frame.grid_rowconfigure(5, weight=1)
-        self.logo_label = customtkinter.CTkLabel(self.sidebar_frame, text="功能列表", font=customtkinter.CTkFont(size=20, weight="bold"))
+        self.logo_label = customtkinter.CTkLabel(self.sidebar_frame, text="功能列表", font=customtkinter.CTkFont(family="微软雅黑", size=20, weight="bold"))
         self.logo_label.grid(row=0, column=0, padx=20, pady=(20, 10))
         self.sidebar_button_1 = customtkinter.CTkButton(self.sidebar_frame, command=self.sidebar_button_1_event)
         self.sidebar_button_1.grid(row=1, column=0, padx=20, pady=10)
@@ -60,12 +60,12 @@ class App(customtkinter.CTk):
 
     def sidebar_button_1_event(self):
         self.sidebar_button_event()
-        self.welcome_first_label = customtkinter.CTkLabel(self, text="欢迎", font=customtkinter.CTkFont(size=48, weight="bold"))
+        self.welcome_first_label = customtkinter.CTkLabel(self, text="欢迎", font=customtkinter.CTkFont(family="微软雅黑", size=48, weight="bold"))
         self.welcome_first_label.grid(row=2, column=3)
         self.widgets.append(self.welcome_first_label)
-        self.tips_first_label = customtkinter.CTkLabel(self, text="请在左侧栏中选择一个你需要部署的功能", font=customtkinter.CTkFont(size=16))
+        self.tips_first_label = customtkinter.CTkLabel(self, text="请在左侧栏中选择一个你需要部署的功能", font=customtkinter.CTkFont(family="微软雅黑", size=16))
         self.tips_first_label.grid(row=4, column=3)
-        self.tips_second_label = customtkinter.CTkLabel(self, text="若是用整合包用户，请在各个功能的路径选择中选择当前目录下的 venv", font=customtkinter.CTkFont(size=16))
+        self.tips_second_label = customtkinter.CTkLabel(self, text="若是用整合包用户，请在各个功能的路径选择中选择当前目录下的 venv", font=customtkinter.CTkFont(family="微软雅黑", size=16))
         self.tips_second_label.grid(row=5, column=3)
         self.widgets.append(self.tips_first_label)
         self.widgets.append(self.tips_second_label)
@@ -73,30 +73,28 @@ class App(customtkinter.CTk):
     def sidebar_button_2_event(self):
         self.sidebar_button_event()
         self.sidebar_button_234_event()
-        self.start_installation.configure(command=lambda: install_sd(self.r, self.progress_bar, self.progress_label, self))
+        self.start_installation.configure(command=lambda: install_sd(self.r, self))
     
     def sidebar_button_3_event(self):
         self.sidebar_button_event()
         self.sidebar_button_234_event()
-        self.start_installation.configure(command=lambda: install_sovits(self.r, self.progress_bar, self.progress_label, self))
+        self.start_installation.configure(command=lambda: install_sovits(self.r, self))
         
     def sidebar_button_4_event(self):
         self.sidebar_button_event()
         self.sidebar_button_234_event()
-        self.start_installation.configure(command=lambda: install_yolo(self.r, self.progress_bar, self.progress_label, self))
+        self.start_installation.configure(command=lambda: install_yolo(self.r, self))
         
     def sidebar_button_234_event(self):
-        self.python_path_tips = customtkinter.CTkLabel(self, text="安装目录：", font=customtkinter.CTkFont(size=16))
+        self.python_path_tips = customtkinter.CTkLabel(self, text="安装目录：", font=customtkinter.CTkFont(family="微软雅黑", size=16))
         self.python_path_tips.grid(row=0, column=1)
         self.widgets.append(self.python_path_tips)
-        self.python_path_label = customtkinter.CTkLabel(self, text="未选择", font=customtkinter.CTkFont(size=16))
+        self.python_path_label = customtkinter.CTkLabel(self, text="未选择", font=customtkinter.CTkFont(family="微软雅黑", size=16))
         self.python_path_label.grid(row=0, column=2)
         self.widgets.append(self.python_path_label)
         self.python_path_btn = customtkinter.CTkButton(self, text="选择", command=self.get_python_path)
         self.python_path_btn.grid(row=0, column=5)
         self.widgets.append(self.python_path_btn)
-        self.progress_bar = customtkinter.CTkProgressBar(self)
-        self.progress_label = customtkinter.CTkLabel(self, text="0/0")
         self.start_installation = customtkinter.CTkButton(self, text="开始安装/更新")
         self.start_installation.grid(row=5, column=3)
         self.widgets.append(self.start_installation)
