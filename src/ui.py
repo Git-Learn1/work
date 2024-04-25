@@ -107,7 +107,6 @@ class App(customtkinter.CTk):
         self.r = customtkinter.filedialog.askdirectory(title="安装位置选取")
         if self.r == "":
             CTkMessagebox(title="错误", message="目录不合法！请重新选择", icon="cancel")
-            self.get_python_path()
         else:
             self.python_path_label.configure(text=self.r)
         
